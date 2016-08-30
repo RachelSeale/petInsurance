@@ -16,18 +16,19 @@ label input[type="radio"]:checked ~ i.fa.fa-circle-o{
     display: none;
 }
 
-label input[type="radio"] ~ i.fa.fa-circle-o{
-    color: $grey;    
+label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
+    color: $morethan-green;
     display: inline;
 }
 
-label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
-    color: $morethan-green;    display: inline;
+label input[type="radio"] ~ i.fa.fa-circle-o{
+    color: $grey;
+    display: inline;
 }
+
 label:hover input[type="radio"] ~ i.fa {
 	color: $morethan-green;
 }
-
 
 div[data-toggle="buttons"] label.active{
     color: $morethan-green;
@@ -35,22 +36,8 @@ div[data-toggle="buttons"] label.active{
 
 div[data-toggle="buttons"] label {
 	display: inline-block;
-	padding: 0 12px;
-  vertical-align: middle;
-}
-
-div[data-toggle="buttons"] label:hover {
-	color: $morethan-green;
-}
-
-div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
-
-.radio-btn {
   width: 80px;
-  padding: 5px 0;
+  padding: 10px 0;
   text-align: left;
   i {
     font-size: 25px;
@@ -58,4 +45,13 @@ div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active
   i, span {
     vertical-align: middle;
   }
+
+  &:hover {
+  	color: $morethan-green;
+  }
+}
+
+div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }

@@ -44,22 +44,94 @@
             <div class="content-container">
               <div ng-controller="ExampleController">
                 <form name="form" class="css-form" novalidate>
-                  <div class="col-sm-12">
+                  <div class="col-sm-6">
                     <div class="pet-form">
+                      <h2>Your Pet details</h2>
                       <div class="form-group">
                         <label for="pet-name">Pets Name:</label>
                         <input type="text" class="form-control" id="pet-name" ng-model="user.petName" name="petName" required="" />
                         <div ng-show="form.$submitted || form.petName.$touched">
-                          <div ng-show="form.petName.$error.required">Tell us your Pet name.</div>
+                          <div ng-show="form.petName.$error.required" class="error">Tell us your Pet name.</div>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label>Type of Pet: </label></br>
+                        <div data-toggle="buttons">
+                          <label class="btn radio-btn">
+                            <input type="radio" name="type" ng-model="user.petType" value="dog">
+                            <i class="fa fa-circle-o fa-2x"></i>
+                            <i class="fa fa-dot-circle-o fa-2x"></i>
+                            <span>  Dog</span>
+                          </label>
+                          <label class="btn radio-btn">
+                            <input type="radio" name="type" ng-model="user.petType" value="cat">
+                            <i class="fa fa-circle-o fa-2x"></i>
+                            <i class="fa fa-dot-circle-o fa-2x"></i>
+                            <span> Cat</span>
+                          </label>
+                        </div>
+                        <div ng-show="form.$submitted || form.petType.$touched">
+                          <div ng-show="!user.petType" class="error">Please tell us the type of your pet</div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label>Gender of {{user.petName}}: </label></br>
+                        <div data-toggle="buttons">
+                          <label class="btn radio-btn">
+                            <input type="radio" name="gender" ng-model="user.petGender" value="male">
+                            <i class="fa fa-circle-o fa-2x"></i>
+                            <i class="fa fa-dot-circle-o fa-2x"></i>
+                            <span>  Male</span>
+                          </label>
+                          <label class="btn radio-btn">
+                            <input type="radio" name="gender" ng-model="user.petGender" value="female">
+                            <i class="fa fa-circle-o fa-2x"></i>
+                            <i class="fa fa-dot-circle-o fa-2x"></i>
+                            <span> Female</span>
+                          </label>
+                        </div>
+                        <div ng-show="form.$submitted || form.petGender.$touched">
+                          <div ng-show="!user.petGender" class="error">Please tell us the gender of {{user.petName}}.</div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="chipped">Has {{user.petName}} been chipped or tagged:</label></br>
+                        <div data-toggle="buttons">
+                          <label class="btn radio-btn">
+                            <input type="radio" name="tagged" ng-model="user.petTagged" value="Yes">
+                            <i class="fa fa-circle-o fa-2x"></i>
+                            <i class="fa fa-dot-circle-o fa-2x"></i>
+                            <span>  Yes</span>
+                          </label>
+                          <label class="btn radio-btn">
+                            <input type="radio" name="tagged" ng-model="user.petTagged" value="No">
+                            <i class="fa fa-circle-o fa-2x"></i>
+                            <i class="fa fa-dot-circle-o fa-2x"></i>
+                            <span>  No</span>
+                          </label>
+                          <label class="btn radio-btn">
+                            <input type="radio" name="tagged" ng-model="user.petTagged" value="unknown">
+                            <i class="fa fa-circle-o fa-2x"></i>
+                            <i class="fa fa-dot-circle-o fa-2x"></i>
+                            <span> Unknown</span>
+                          </label>
+                        </div>
+                        <div ng-show="form.$submitted || form.petTagged.$touched">
+                          <div ng-show="!user.petTagged" class="error">Please tell us the gender of {{user.petName}}.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="user-form">
+                      <h2>Your details</h2>
                       <div class="form-group">
                         <label for="email">Email:</label>
                         <input type="email" class="form-control" id="email" ng-model="user.email" name="uEmail" required="" />
                         <br />
                         <div ng-show="form.$submitted || form.uEmail.$touched">
-                          <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
-                          <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                          <span ng-show="form.uEmail.$error.required" class="error">Tell us your email.</span>
+                          <span ng-show="form.uEmail.$error.email" class="error">This is not a valid email.</span>
                         </div>
                       </div>
                       <div class="form-group">
@@ -67,13 +139,19 @@
                         <input type="date" class="form-control" id="dob" name="userDOB" ng-model="dob.value"
                             placeholder="DD-MM-YYYY" required />
                         <div ng-show="form.$submitted || form.uEmail.$touched">
-                          <span class="error" ng-show="form.userDOB.$error.required">
-                              Required!</span>
-                          <span class="error" ng-show="form.userDOB.$error.date">
-                              Not a valid date!</span>
+                          <span class="error" ng-show="form.userDOB.$error.required">Required</span>
+                          <span class="error" ng-show="form.userDOB.$error.date">Not a valid date</span>
                         </div>
                       </div>
-
+                      <div class="form-group">
+                        <input type="checkbox" ng-model="user.agree" name="userAgree" required="" />
+                        I agree:
+                        <input ng-show="user.agree" class="form-control" type="text" ng-model="user.agreeSign" required="" />
+                        <br />
+                        <div ng-show="form.$submitted || form.userAgree.$touched">
+                          <div ng-show="!user.agree || !user.agreeSign" class="error">Please agree and sign.</div>
+                        </div>
+                      </div>
                       <div class="form-group">
                         <input type="submit" class="btn btn-default btn-lg" ng-click="update(user)" value="Save" />
                       </div>

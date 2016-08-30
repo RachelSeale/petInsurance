@@ -1,0 +1,12 @@
+.pet-form,
+.user-form {
+	background-color: $white;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.error {
+	color: $error-red;
+	font-weight: $font-bold;
+	padding: 10px 0;
+}
