@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/2410a3581f.js"></script>
     <meta charset="utf-8">
     <title>Pet Insurance</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +11,87 @@
     <meta name="author" content="">
   </head>
 
-  <body>
+  <body ng-app="formExample">
 
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#"><img src="/images/logo.png" alt="MoreThan" height="50"></a>
+        </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#">About</a><span class="hover"></span></li>
+          <li><a href="#">Services</a><span class="hover"></span></li>
+          <li><a href="#">Contact</a><span class="hover"></span></li>
+        </ul>
+      </div>
+      </div>
+    </nav>
 
 
     <section class="main-container">
+        <div class="homepage__banner">
+            <h1>Pet Insurance</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="content-container">
+              <div ng-controller="ExampleController">
+                <form name="form" class="css-form" novalidate>
+                  <div class="col-sm-12">
+                    <div class="pet-form">
+                      <div class="form-group">
+                        <label for="pet-name">Pets Name:</label>
+                        <input type="text" class="form-control" id="pet-name" ng-model="user.petName" name="petName" required="" />
+                        <div ng-show="form.$submitted || form.petName.$touched">
+                          <div ng-show="form.petName.$error.required">Tell us your Pet name.</div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" ng-model="user.email" name="uEmail" required="" />
+                        <br />
+                        <div ng-show="form.$submitted || form.uEmail.$touched">
+                          <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+                          <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" class="form-control" id="dob" name="userDOB" ng-model="dob.value"
+                            placeholder="DD-MM-YYYY" required />
+                        <div ng-show="form.$submitted || form.uEmail.$touched">
+                          <span class="error" ng-show="form.userDOB.$error.required">
+                              Required!</span>
+                          <span class="error" ng-show="form.userDOB.$error.date">
+                              Not a valid date!</span>
+                        </div>
+                      </div>
 
+                      <div class="form-group">
+                        <input type="submit" class="btn btn-default btn-lg" ng-click="update(user)" value="Save" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
     </section>
 
+
+    <!-- Javascript
+    ================================================== -->
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angular_material/1.0.3/angular-material.min.js'></script>
+    <script src="javascripts/form.js"></script>
   </body>
 </html>
