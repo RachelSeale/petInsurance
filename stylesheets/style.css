@@ -5900,10 +5900,8 @@ form .pet-section,
 form .user-section,
 form .policy-section {
   background-color: #ffffff;
-  height: 700px;
   padding: 20px; }
 form .policy-section {
-  height: 300px;
   margin-top: 10px; }
   form .policy-section .policy-container {
     height: 120px;
@@ -5914,7 +5912,8 @@ form .policy-section {
       padding: 10px 20px; }
 form .form-group {
   padding-top: 5px; }
-form input {
+form input,
+form select {
   margin-top: 10px; }
 form .error {
   color: #ce2f23;
@@ -5964,7 +5963,7 @@ div[data-toggle="buttons"] label.active {
 div[data-toggle="buttons"] label {
   display: inline-block;
   width: 80px;
-  padding: 10px 0;
+  padding: 8px 0;
   text-align: left; }
   div[data-toggle="buttons"] label i {
     font-size: 25px; }

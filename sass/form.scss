@@ -4,12 +4,10 @@ form {
 	.user-section,
 	.policy-section {
 		background-color: $white;
-		height: 700px;
 		padding: 20px;
 	}
 
 	.policy-section {
-		height: 300px;
 		margin-top: 10px;
 
 		.policy-container {
@@ -28,7 +26,8 @@ form {
 		padding-top: 5px;
 	}
 
-	input {
+	input,
+	select {
 		margin-top: 10px;
 	}
 
