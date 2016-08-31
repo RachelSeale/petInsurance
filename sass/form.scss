@@ -1,12 +1,40 @@
-.pet-form,
-.user-form {
-	background-color: $white;
-	padding: 20px;
-	border-radius: 5px;
-}
+form {
 
-.error {
-	color: $error-red;
-	font-weight: $font-bold;
-	padding: 10px 0;
+	.pet-section,
+	.user-section,
+	.policy-section {
+		background-color: $white;
+		height: 700px;
+		padding: 20px;
+	}
+
+	.policy-section {
+		height: 300px;
+		margin-top: 10px;
+
+		.policy-container {
+			height:120px;
+			border:1px solid #ccc;
+			overflow:auto;
+			margin: 10px 0;
+
+			p {
+				padding: 10px 20px;
+			}
+		}
+	}
+
+	.form-group {
+		padding-top: 5px;
+	}
+
+	input {
+		margin-top: 10px;
+	}
+
+	.error {
+		color: $error-red;
+		font-weight: $font-bold;
+		padding: 10px 0;
+	}
 }

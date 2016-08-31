@@ -12,4 +12,5 @@ angular.module('formExample', [])
       console.log($scope.user);
     };
   }]);
+
 })(window.angular);
