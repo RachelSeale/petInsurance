@@ -5909,6 +5909,8 @@ form .policy-section {
     margin: 10px 0; }
     form .policy-section .policy-container p {
       padding: 10px 20px; }
+  form .policy-section label {
+    display: inline-block; }
 form .form-group {
   padding-top: 5px; }
 form input,
