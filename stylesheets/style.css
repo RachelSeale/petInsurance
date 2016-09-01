@@ -5885,7 +5885,7 @@ form {
   border: none; }
 
 .icon-bar {
-  background: #0C8400; }
+  background: #ffffff; }
 
 @media (max-width: 767px) {
   .nav {
@@ -5914,10 +5914,16 @@ form .form-group {
 form input,
 form select {
   margin-top: 10px; }
+form label {
+  display: block; }
 form .error {
   color: #ce2f23;
   font-weight: 600;
   padding: 10px 0; }
+
+[ng-cloak],
+.ng-cloak {
+  display: none; }
 
 /**
  * Homepage banner
@@ -5959,7 +5965,7 @@ label:hover input[type="radio"] ~ i.fa {
 div[data-toggle="buttons"] label {
   display: inline-block;
   width: 80px;
-  padding: 8px 0;
+  padding: 6px 0;
   text-align: left; }
   div[data-toggle="buttons"] label i {
     font-size: 25px; }

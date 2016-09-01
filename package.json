@@ -1,8 +1,8 @@
 {
-  "name": "robcadsite",
+  "name": "Morethan Pet Insurance",
   "version": "1.0.0",
-  "description": "Portfolio",
-  "main": "index.js",
+  "description": "Pet insurance form",
+  "main": "form.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
