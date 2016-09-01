@@ -11,7 +11,7 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         files: {
-          "stylesheets/style.css": "sass/style.scss"
+          "stylesheets/style.css": "sass/_style.scss"
         }
       }
     },
@@ -38,10 +38,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-browser-sync');
-  
+
 
   // Launch BrowserSync + watch task
   grunt.registerTask('default', ['browserSync', 'watch']);
 
 };
-
