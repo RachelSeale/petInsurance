@@ -5852,12 +5852,6 @@ body {
 form {
   margin-top: 20px; }
 
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-
 .navbar-inverse {
   background: #0C8400;
   border-bottom: 4px solid #ffffff; }
