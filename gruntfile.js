@@ -11,7 +11,7 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         files: {
-          "stylesheets/style.css": "sass/_style.scss"
+          "stylesheets/style.css": "sass/style.scss"
         }
       }
     },
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
             "stylesheets/*.css",
             "*.html",
             "includes/*.html",
-            "*.js"
+            "js/*.js"
           ]
         },
 	    options: {

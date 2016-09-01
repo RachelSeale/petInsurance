@@ -57,15 +57,15 @@
                         </div>
                         <div class="form-group">
                           <label>Type of Pet: </label>
-                          <div data-toggle="buttons">
+                          <div class="custom-buttons" data-toggle="buttons">
                             <label class="btn radio-btn">
-                              <input type="radio" name="type" ng-model="user.petType" value="dog">
+                              <input type="radio" name="type" ng-model="user.petType" class="custom-radio" value="dog">
                               <i class="fa fa-circle-o fa-2x"></i>
                               <i class="fa fa-dot-circle-o fa-2x"></i>
                               <span>  Dog</span>
                             </label>
                             <label class="btn radio-btn">
-                              <input type="radio" name="type" ng-model="user.petType" value="cat">
+                              <input type="radio" name="type" ng-model="user.petType" class="custom-radio" value="cat">
                               <i class="fa fa-circle-o fa-2x"></i>
                               <i class="fa fa-dot-circle-o fa-2x"></i>
                               <span> Cat</span>
@@ -77,15 +77,15 @@
                         </div>
                         <div class="form-group">
                           <label>Gender of {{user.petName}}: </label>
-                          <div data-toggle="buttons">
+                          <div class="custom-buttons" data-toggle="buttons">
                             <label class="btn radio-btn">
-                              <input type="radio" name="gender" ng-model="user.petGender" value="male">
+                              <input type="radio" name="gender" ng-model="user.petGender" class="custom-radio" value="male">
                               <i class="fa fa-circle-o fa-2x"></i>
                               <i class="fa fa-dot-circle-o fa-2x"></i>
                               <span>  Male</span>
                             </label>
                             <label class="btn radio-btn">
-                              <input type="radio" name="gender" ng-model="user.petGender" value="female">
+                              <input type="radio" name="gender" ng-model="user.petGender" class="custom-radio" value="female">
                               <i class="fa fa-circle-o fa-2x"></i>
                               <i class="fa fa-dot-circle-o fa-2x"></i>
                               <span> Female</span>
@@ -106,21 +106,21 @@
                         </div>
                         <div class="form-group">
                           <label for="chipped">Has {{user.petName}} been chipped or tagged:</label>
-                          <div data-toggle="buttons">
+                          <div class="custom-buttons" data-toggle="buttons">
                             <label class="btn radio-btn">
-                              <input type="radio" name="tagged" ng-model="user.petTagged" value="Yes">
+                              <input type="radio" name="tagged" ng-model="user.petTagged" class="custom-radio" value="Yes">
                               <i class="fa fa-circle-o fa-2x"></i>
                               <i class="fa fa-dot-circle-o fa-2x"></i>
                               <span>  Yes</span>
                             </label>
                             <label class="btn radio-btn">
-                              <input type="radio" name="tagged" ng-model="user.petTagged" value="No">
+                              <input type="radio" name="tagged" ng-model="user.petTagged" class="custom-radio" value="No">
                               <i class="fa fa-circle-o fa-2x"></i>
                               <i class="fa fa-dot-circle-o fa-2x"></i>
                               <span>  No</span>
                             </label>
                             <label class="btn radio-btn">
-                              <input type="radio" name="tagged" ng-model="user.petTagged" value="unknown">
+                              <input type="radio" name="tagged" ng-model="user.petTagged" class="custom-radio" value="unknown">
                               <i class="fa fa-circle-o fa-2x"></i>
                               <i class="fa fa-dot-circle-o fa-2x"></i>
                               <span> Unknown</span>
