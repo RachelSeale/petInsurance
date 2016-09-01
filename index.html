@@ -45,7 +45,7 @@
             <div class="content-container">
               <div ng-controller="ExampleController">
                 <form name="form" class="css-form" novalidate>
-                  <div class="row">
+                  <div class="row row-eq-height">
                     <div class="col-sm-6">
                       <div class="pet-section">
                         <h2>Your Pet details</h2>
@@ -172,7 +172,6 @@
                           <input type="number" placeholder="eg. 0123456789" class="form-control" id="user-phone" ng-model="user.phone" name="phone" required="" />
                           <div ng-show="form.$submitted || form.phone.$touched">
                             <div ng-show="form.phone.$error.required" class="error">Tell us your phone number.</div>
-                            <!-- <div ng-show="form.email.$error.number" class="error">This is not a valid email.</div> -->
                           </div>
                         </div>
                       </div>
