@@ -31,6 +31,10 @@ form {
 		margin-top: 10px;
 	}
 
+	label {
+		display: block;
+	}
+
 	.error {
 		color: $error-red;
 		font-weight: $font-bold;
