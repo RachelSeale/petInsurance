@@ -30,10 +30,6 @@ label:hover input[type="radio"] ~ i.fa {
 	color: $morethan-green;
 }
 
-div[data-toggle="buttons"] label.active{
-    color: $morethan-green;
-}
-
 div[data-toggle="buttons"] label {
 	display: inline-block;
   width: 80px;
@@ -46,12 +42,13 @@ div[data-toggle="buttons"] label {
     vertical-align: middle;
   }
 
+  &:active,
   &:hover {
   	color: $morethan-green;
   }
 }
 
-div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+div[data-toggle="buttons"] label:active {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
