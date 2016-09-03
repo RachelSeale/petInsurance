@@ -15,7 +15,8 @@ $font-family: 'Open Sans Condensed', sans-serif;
 
 
 h1 {
-	color: $morethan-green;
+	color: $white;
+	text-shadow: 2px 2px $grey;
 	font-size: 54px;
 	text-transform: uppercase;
 	font-family: $font-family;

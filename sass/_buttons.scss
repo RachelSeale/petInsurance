@@ -8,10 +8,9 @@
     font-size: 14px;
 }
 
+
 //Custom Radio
-.custom-radio ~ .fa.fa-dot-circle-o{
-    display: none;
-}
+.custom-radio ~ .fa.fa-dot-circle-o,
 .custom-radio:checked ~ .fa.fa-circle-o{
     display: none;
 }
