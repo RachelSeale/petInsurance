@@ -1,6 +1,8 @@
 # petInsurance
 Pet Insurance form
 
-2 Col form made with Angular and Bootstrap with validation
+2 Col form made with Bootstrap and Angular with validation
 
-To run in terminal just run - grunt
+In terminal just run -
+
+npm install and grunt 
