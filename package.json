@@ -9,11 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "grunt": "^0.4.5",
+    "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-include-replace": "^3.2.0",
+    "grunt-contrib-watch": "^1.0.0",
     "ng-datepicker": "^1.0.2"
   }
 }
