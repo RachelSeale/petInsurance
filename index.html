@@ -53,7 +53,7 @@
                           <label for="pet-name">Pets Name:</label>
                           <input type="text" class="form-control" placeholder="Pets Name"  id="pet-name" ng-model="user.petName" name="petName" required="" />
                           <div ng-show="form.$submitted || form.petName.$touched">
-                            <div ng-show="form.petName.$error.required" class="error">Tell us your Pet name.</div>
+                            <div ng-show="form.petName.$error.required" class="error" ng-cloak>Tell us your Pet name.</div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -73,7 +73,7 @@
                             </label>
                           </div>
                           <div ng-show="form.$submitted || form.petType.$touched">
-                            <div ng-show="!user.petType" class="error">Please tell us the type of your pet</div>
+                            <div ng-show="!user.petType" class="error" ng-cloak>Please tell us the type of your pet</div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -93,7 +93,7 @@
                             </label>
                           </div>
                           <div ng-show="form.$submitted || form.petGender.$touched">
-                            <div ng-show="!user.petGender" class="error">Please tell us the gender of {{user.petName}}.</div>
+                            <div ng-show="!user.petGender" class="error" ng-cloak>Please tell us the gender of {{user.petName}}.</div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -101,8 +101,8 @@
                           <input type="date" class="form-control" id="pet-dob" name="petDOB" ng-model="user.petDOB"
                               placeholder="DD-MM-YYYY" required />
                           <div ng-show="form.$submitted || form.petDOB.$touched">
-                            <span class="error" ng-show="form.petDOB.$error.required">Required</span>
-                            <span class="error" ng-show="form.petDOB.$error.date">Not a valid date</span>
+                            <span class="error" ng-show="form.petDOB.$error.required" ng-cloak>Required</span>
+                            <span class="error" ng-show="form.petDOB.$error.date" ng-cloak>Not a valid date</span>
                           </div>
                         </div>
                         <div class="form-group">
@@ -128,7 +128,7 @@
                             </label>
                           </div>
                           <div ng-show="form.$submitted || form.petTagged.$touched">
-                            <div ng-show="!user.petTagged" class="error">Please tell us the gender of {{user.petName}}.</div>
+                            <div ng-show="!user.petTagged" class="error" ng-cloak>Please tell us the gender of {{user.petName}}.</div>
                           </div>
                         </div>
                       </div>
@@ -149,14 +149,14 @@
                           <label for="user-name">First Name:</label>
                           <input type="text" placeholder="First Name"  class="form-control" id="user-name" ng-model="user.name" name="name" required="" />
                           <div ng-show="form.$submitted || form.name.$touched">
-                            <div ng-show="form.name.$error.required" class="error">Tell us your first name.</div>
+                            <div ng-show="form.name.$error.required" class="error" ng-cloak>Tell us your first name.</div>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="user-lastname">Last Name:</label>
                           <input type="text" placeholder="Last Name" class="form-control" id="user-lastname" ng-model="user.lastname" name="lastname" required="" />
                           <div ng-show="form.$submitted || form.lastname.$touched">
-                            <div ng-show="form.lastname.$error.required" class="error">Tell us your last name.</div>
+                            <div ng-show="form.lastname.$error.required" class="error" ng-cloak>Tell us your last name.</div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -164,23 +164,23 @@
                           <input type="date" class="form-control" id="user-dob" name="userDOB" ng-model="user.userDOB"
                               placeholder="DD-MM-YYYY" required />
                           <div ng-show="form.$submitted || form.userDOB.$touched">
-                            <span class="error" ng-show="form.userDOB.$error.required">Required</span>
-                            <span class="error" ng-show="form.userDOB.$error.date">Not a valid date</span>
+                            <span class="error" ng-show="form.userDOB.$error.required" ng-cloak>Required</span>
+                            <span class="error" ng-show="form.userDOB.$error.date" ng-cloak>Not a valid date</span>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="user-email">Email:</label>
                           <input type="email" placeholder="eg. email@address.com" class="form-control" id="user-email" ng-model="user.email" name="email" required="" />
                           <div ng-show="form.$submitted || form.email.$touched">
-                            <div ng-show="form.email.$error.required" class="error">Tell us your email address.</div>
-                            <div ng-show="form.email.$error.email" class="error">This is not a valid email.</div>
+                            <div ng-show="form.email.$error.required" class="error" ng-cloak>Tell us your email address.</div>
+                            <div ng-show="form.email.$error.email" class="error" ng-cloak>This is not a valid email.</div>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="user-phone">Telephone:</label>
                           <input type="number" placeholder="eg. 0123456789" class="form-control" id="user-phone" ng-model="user.phone" name="phone" required="" />
                           <div ng-show="form.$submitted || form.phone.$touched">
-                            <div ng-show="form.phone.$error.required" class="error">Tell us your phone number.</div>
+                            <div ng-show="form.phone.$error.required" class="error" ng-cloak>Tell us your phone number.</div>
                           </div>
                         </div>
                       </div>
@@ -206,7 +206,7 @@
                           <label>I agree</label>
                           <input type="checkbox" ng-model="user.agree" name="userAgree" required="" />
                           <div ng-show="form.$submitted || form.agree.$touched">
-                            <div ng-show="!user.agree" class="error">Please tick if you agree.</div>
+                            <div ng-show="!user.agree" class="error" ng-cloak>Please tick if you agree.</div>
                           </div>
                         </div>
                         <div class="form-group">
