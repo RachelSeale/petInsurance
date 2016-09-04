@@ -7,7 +7,7 @@ $error-red: #ce2f23;
 
 //Font Weight
 $font-regular: 500;
-$font-bold: 600;
+$font-bold: 700;
 
 //Font Family
 
@@ -21,8 +21,11 @@ h1 {
 	text-transform: uppercase;
 	font-family: $font-family;
 	font-weight: $font-bold;
-	margin-left: 75px;
-	letter-spacing: 5px;
+	margin-left: 65px;
+	letter-spacing: 2px;
+	@media (min-width: $screen-sm-min) {
+		margin-left: 75px;
+	}
 }
 
 h2 {
