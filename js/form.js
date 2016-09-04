@@ -1,7 +1,7 @@
 (function(angular) {
   'use strict';
 
-  angular.module('formExample', [])
+  angular.module('formExample', ['jkuri.datepicker'])
     .controller('ExampleController', ['$scope', function($scope) {
 
       $scope.update = function(user) {

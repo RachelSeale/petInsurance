@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" type="text/css" href="node_modules/ng-datepicker/src/css/ngDatepicker.css">
     <link href="/stylesheets/style.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
     <script src="https://use.fontawesome.com/2410a3581f.js"></script>
     <meta charset="utf-8">
@@ -14,29 +14,13 @@
 
   <body ng-app="formExample">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a href="#"><img src="/images/logo.png" alt="MoreThan" height="50"></a>
         </div>
-
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="#">About</a><span class="hover"></span></li>
-          <li><a href="#">Services</a><span class="hover"></span></li>
-          <li><a href="#">Contact</a><span class="hover"></span></li>
-        </ul>
-      </div>
       </div>
     </nav>
-
-
     <section class="main-container">
         <div class="homepage__banner">
             <h1>Pet Insurance</h1>
@@ -52,8 +36,8 @@
                         <div class="form-group">
                           <label for="pet-name">Pets Name:</label>
                           <input type="text" class="form-control" placeholder="Pets Name"  id="pet-name" ng-model="user.petName" name="petName" required="" />
-                          <div ng-show="form.$submitted || form.petName.$touched">
-                            <div ng-show="form.petName.$error.required" class="error" ng-cloak>Tell us your Pet name.</div>
+                          <div ng-show="form.$submitted || form.petName.$touched" ng-cloak>
+                            <div ng-show="form.petName.$error.required" class="error">Tell us your Pet name.</div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -72,8 +56,8 @@
                               <span> Cat</span>
                             </label>
                           </div>
-                          <div ng-show="form.$submitted || form.petType.$touched">
-                            <div ng-show="!user.petType" class="error" ng-cloak>Please tell us the type of your pet</div>
+                          <div ng-show="form.$submitted || form.petType.$touched" ng-cloak>
+                            <div ng-show="!user.petType" class="error">Please tell us the type of your pet</div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -92,17 +76,17 @@
                               <span> Female</span>
                             </label>
                           </div>
-                          <div ng-show="form.$submitted || form.petGender.$touched">
-                            <div ng-show="!user.petGender" class="error" ng-cloak>Please tell us the gender of {{user.petName}}.</div>
+                          <div ng-show="form.$submitted || form.petGender.$touched || form.petGender.$untouched " ng-cloak>
+                            <div ng-show="!user.petGender" class="error">Please tell us the gender of {{user.petName}}.</div>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="pet-dob">Date of Birth:</label>
-                          <input type="date" class="form-control" id="pet-dob" name="petDOB" ng-model="user.petDOB"
-                              placeholder="DD-MM-YYYY" required />
-                          <div ng-show="form.$submitted || form.petDOB.$touched">
-                            <span class="error" ng-show="form.petDOB.$error.required" ng-cloak>Required</span>
-                            <span class="error" ng-show="form.petDOB.$error.date" ng-cloak>Not a valid date</span>
+                          <ng-datepicker ng-model="user.petDob" id="pet-dob" name="petDOB" first-week-day-sunday="true" placeholder="Date of Birth" required>
+                          </ng-datepicker>
+                          <div ng-show="form.$submitted || form.petDOB.$touched" ng-cloak>
+                            <span class="error" ng-show="form.petDOB.$error.required">Please tell us your birthday</span>
+                            <span class="error" ng-show="form.petDOB.$error.date">Not a valid date</span>
                           </div>
                         </div>
                         <div class="form-group">
@@ -127,8 +111,8 @@
                               <span> Unknown</span>
                             </label>
                           </div>
-                          <div ng-show="form.$submitted || form.petTagged.$touched">
-                            <div ng-show="!user.petTagged" class="error" ng-cloak>Please tell us the gender of {{user.petName}}.</div>
+                          <div ng-show="form.$submitted || form.petTagged.$touched"  ng-cloak>
+                            <div ng-show="!user.petTagged" class="error">Please tell us the gender of {{user.petName}}.</div>
                           </div>
                         </div>
                       </div>
@@ -147,40 +131,42 @@
                         </div>
                         <div class="form-group">
                           <label for="user-name">First Name:</label>
-                          <input type="text" placeholder="First Name"  class="form-control" id="user-name" ng-model="user.name" name="name" required="" />
-                          <div ng-show="form.$submitted || form.name.$touched">
-                            <div ng-show="form.name.$error.required" class="error" ng-cloak>Tell us your first name.</div>
+                          <input type="text" placeholder="First Name"  class="form-control" id="user-name" ng-model="user.name" name="userName" required="" />
+                          <div ng-show="form.$submitted || form.unserName.$touched" ng-cloak>
+                            <div ng-show="form.userName.$error.required" class="error">Tell us your first name.</div>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="user-lastname">Last Name:</label>
-                          <input type="text" placeholder="Last Name" class="form-control" id="user-lastname" ng-model="user.lastname" name="lastname" required="" />
-                          <div ng-show="form.$submitted || form.lastname.$touched">
-                            <div ng-show="form.lastname.$error.required" class="error" ng-cloak>Tell us your last name.</div>
+                          <input type="text" placeholder="Last Name" class="form-control" id="user-lastname" ng-model="user.lastname" name="userLastname" required="" />
+                          <div ng-show="form.$submitted || form.userLastname.$touched"  ng-cloak>
+                            <div ng-show="form.userLastname.$error.required" class="error">Tell us your last name.</div>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="user-dob">Date of Birth:</label>
-                          <input type="date" class="form-control" id="user-dob" name="userDOB" ng-model="user.userDOB"
-                              placeholder="DD-MM-YYYY" required />
-                          <div ng-show="form.$submitted || form.userDOB.$touched">
-                            <span class="error" ng-show="form.userDOB.$error.required" ng-cloak>Required</span>
-                            <span class="error" ng-show="form.userDOB.$error.date" ng-cloak>Not a valid date</span>
+
+                          <ng-datepicker ng-model="user.userDob" id="user-dob" name="userDOB" first-week-day-sunday="true" placeholder="Date of Birth" required>
+                          </ng-datepicker>
+
+                          <div ng-show="form.$submitted || form.userDOB.$touched" ng-cloak>
+                            <span class="error" ng-show="form.userDOB.$error.required">Please tell us your birthday</span>
+                            <span class="error" ng-show="form.userDOB.$error.date">Not a valid date</span>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="user-email">Email:</label>
                           <input type="email" placeholder="eg. email@address.com" class="form-control" id="user-email" ng-model="user.email" name="email" required="" />
-                          <div ng-show="form.$submitted || form.email.$touched">
-                            <div ng-show="form.email.$error.required" class="error" ng-cloak>Tell us your email address.</div>
-                            <div ng-show="form.email.$error.email" class="error" ng-cloak>This is not a valid email.</div>
+                          <div ng-show="form.$submitted || form.email.$touched" ng-cloak>
+                            <div ng-show="form.email.$error.required" class="error">Tell us your email address.</div>
+                            <div ng-show="form.email.$error.email" class="error">This is not a valid email.</div>
                           </div>
                         </div>
                         <div class="form-group">
                           <label for="user-phone">Telephone:</label>
                           <input type="number" placeholder="eg. 0123456789" class="form-control" id="user-phone" ng-model="user.phone" name="phone" required="" />
-                          <div ng-show="form.$submitted || form.phone.$touched">
-                            <div ng-show="form.phone.$error.required" class="error" ng-cloak>Tell us your phone number.</div>
+                          <div ng-show="form.$submitted || form.phone.$touched"  ng-cloak>
+                            <div ng-show="form.phone.$error.required" class="error">Tell us your phone number.</div>
                           </div>
                         </div>
                       </div>
@@ -205,8 +191,8 @@
                           <p>By clicking Proceed you agree that the above answers are correct to the best of your knowledge and belief and that you have read and met our eligibility conditions.</p>
                           <label>I agree</label>
                           <input type="checkbox" ng-model="user.agree" name="userAgree" required="" />
-                          <div ng-show="form.$submitted || form.agree.$touched">
-                            <div ng-show="!user.agree" class="error" ng-cloak>Please tick if you agree.</div>
+                          <div ng-show="form.$submitted || form.agree.$touched"  ng-cloak>
+                            <div ng-show="!user.agree" class="error">Please tick if you agree.</div>
                           </div>
                         </div>
                         <div class="form-group">
@@ -224,12 +210,10 @@
 
     <!-- Javascript
     ================================================== -->
-    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js"   integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js'></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/angular_material/1.0.3/angular-material.min.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js"></script>
+    <script src="js/date.js"></script>
     <script src="js/form.js"></script>
-    <!-- <script src="javascripts/dropdown.js"></script> -->
+    <script src="node_modules/ng-datepicker/src/js/ngDatepicker.min.js"></script>
   </body>
 </html>
