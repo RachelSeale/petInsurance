@@ -25,6 +25,13 @@ form {
 	.policy-section {
 		margin-top: 10px;
 
+		input.ng-datepicker-input {
+			width: 100%;
+			@media (min-width: $screen-sm-min) {
+				width: 40%;
+			}
+		}
+
 		.policy-container {
 			height:120px;
 			border:1px solid #ccc;
