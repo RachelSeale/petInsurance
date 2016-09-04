@@ -7,7 +7,7 @@ $error-red: #ce2f23;
 
 //Font Weight
 $font-regular: 500;
-$font-bold: 700;
+$font-bold: 600;
 
 //Font Family
 
@@ -21,12 +21,8 @@ h1 {
 	text-transform: uppercase;
 	font-family: $font-family;
 	font-weight: $font-bold;
-	margin-left: 60px;
+	margin-left: 75px;
 	letter-spacing: 5px;
-	/* Small devices (tablets, 768px and up) */
-	@media (min-width: $screen-sm-min) {
-		margin-left: 75px;
-	}
 }
 
 h2 {
@@ -36,5 +32,5 @@ h2 {
 	text-transform: uppercase;
 	font-family: $font-family;
 	font-weight: $font-bold;
-	letter-spacing: 2px;
+	letter-spacing: 5px;
 }
