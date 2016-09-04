@@ -33,15 +33,16 @@
                     <div class="col-sm-6">
                       <div class="pet-section">
                         <h2>Your Pet details</h2>
+                        <div class="required-text">(<span class="asterisk">*</span> = Required)</div>
                         <div class="form-group">
-                          <label for="pet-name">Pets Name:</label>
+                          <label for="pet-name">Pets Name:<span class="asterisk">*</span></label>
                           <input type="text" class="form-control" placeholder="Pets Name"  id="pet-name" ng-model="user.petName" name="petName" required="" />
                           <div ng-show="form.$submitted || form.petName.$touched" ng-cloak>
                             <div ng-show="form.petName.$error.required" class="error">Tell us your Pet name.</div>
                           </div>
                         </div>
                         <div class="form-group">
-                          <label>Type of Pet: </label></br>
+                          <label>Type of Pet:<span class="asterisk">*</span></label>
                           <div class="custom-buttons" data-toggle="buttons">
                             <label class="btn radio-btn">
                               <input type="radio" name="type" ng-model="user.petType" class="custom-radio" value="dog">
@@ -61,7 +62,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label>Gender of {{user.petName}}: </label></br>
+                          <label>Gender of {{user.petName}}:<span class="asterisk">*</span></label>
                           <div class="custom-buttons" data-toggle="buttons">
                             <label class="btn radio-btn">
                               <input type="radio" name="gender" ng-model="user.petGender" class="custom-radio" value="male">
@@ -81,7 +82,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="pet-dob">Date of Birth:</label>
+                          <label for="pet-dob">Date of Birth:<span class="asterisk">*</span></label>
                           <ng-datepicker ng-model="user.petDob" id="pet-dob" name="petDOB" first-week-day-sunday="true" placeholder="Date of Birth" required>
                           </ng-datepicker>
                           <div ng-show="form.$submitted || form.petDOB.$touched" ng-cloak>
@@ -90,7 +91,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="chipped">Has {{user.petName}} been chipped or tagged:</label></br>
+                          <label for="chipped">Has {{user.petName}} been chipped or tagged:<span class="asterisk">*</span></label></br>
                           <div class="custom-buttons" data-toggle="buttons">
                             <label class="btn radio-btn">
                               <input type="radio" name="tagged" ng-model="user.petTagged" class="custom-radio" value="Yes">
@@ -130,21 +131,21 @@
                           </select>
                         </div>
                         <div class="form-group">
-                          <label for="user-name">First Name:</label>
+                          <label for="user-name">First Name:<span class="asterisk">*</span></label>
                           <input type="text" placeholder="First Name"  class="form-control" id="user-name" ng-model="user.name" name="userName" required="" />
                           <div ng-show="form.$submitted || form.unserName.$touched" ng-cloak>
                             <div ng-show="form.userName.$error.required" class="error">Tell us your first name.</div>
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="user-lastname">Last Name:</label>
+                          <label for="user-lastname">Last Name:<span class="asterisk">*</span></label>
                           <input type="text" placeholder="Last Name" class="form-control" id="user-lastname" ng-model="user.lastname" name="userLastname" required="" />
                           <div ng-show="form.$submitted || form.userLastname.$touched"  ng-cloak>
                             <div ng-show="form.userLastname.$error.required" class="error">Tell us your last name.</div>
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="user-dob">Date of Birth:</label>
+                          <label for="user-dob">Date of Birth:<span class="asterisk">*</span></label>
 
                           <ng-datepicker ng-model="user.userDob" id="user-dob" name="userDOB" first-week-day-sunday="true" placeholder="Date of Birth" required>
                           </ng-datepicker>
@@ -155,7 +156,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="user-email">Email:</label>
+                          <label for="user-email">Email:<span class="asterisk">*</span></label>
                           <input type="email" placeholder="eg. email@address.com" class="form-control" id="user-email" ng-model="user.email" name="email" required="" />
                           <div ng-show="form.$submitted || form.email.$touched" ng-cloak>
                             <div ng-show="form.email.$error.required" class="error">Tell us your email address.</div>
@@ -163,7 +164,7 @@
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="user-phone">Telephone:</label>
+                          <label for="user-phone">Telephone:<span class="asterisk">*</span></label>
                           <input type="number" placeholder="eg. 0123456789" class="form-control" id="user-phone" ng-model="user.phone" name="phone" required="" />
                           <div ng-show="form.$submitted || form.phone.$touched"  ng-cloak>
                             <div ng-show="form.phone.$error.required" class="error">Tell us your phone number.</div>
@@ -189,7 +190,7 @@
                             </ul>
                           </div>
                           <p>By clicking Proceed you agree that the above answers are correct to the best of your knowledge and belief and that you have read and met our eligibility conditions.</p>
-                          <label>I agree</label>
+                          <label>I agree<span class="asterisk">*</span></label>
                           <input type="checkbox" ng-model="user.agree" name="userAgree" required="" />
                           <div ng-show="form.$submitted || form.agree.$touched"  ng-cloak>
                             <div ng-show="!user.agree" class="error">Please tick if you agree.</div>

@@ -1,12 +1,27 @@
 form {
 
+	.asterisk {
+		color: $morethan-green;
+		font-weight: $font-bold;
+	}
+
+	.required-text {
+		display: inline-block;
+    float: right;
+		font-size: 12px;
+
+		.asterisk {
+			font-size: 25px;
+			vertical-align: -webkit-baseline-middle;
+		}
+	}
+
 	.pet-section,
 	.user-section,
 	.policy-section {
 		background-color: $white;
 		padding: 20px;
 	}
-
 	.policy-section {
 		margin-top: 10px;
 

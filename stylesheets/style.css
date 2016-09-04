@@ -5838,6 +5838,7 @@ h2 {
   color: #0C8400;
   font-size: 24px;
   margin: 0 0 20px 0;
+  display: inline-block;
   text-transform: uppercase;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 700;
@@ -5867,6 +5868,16 @@ form {
   background: #0C8400;
   border-bottom: 4px solid #ffffff; }
 
+form .asterisk {
+  color: #0C8400;
+  font-weight: 700; }
+form .required-text {
+  display: inline-block;
+  float: right;
+  font-size: 12px; }
+  form .required-text .asterisk {
+    font-size: 25px;
+    vertical-align: -webkit-baseline-middle; }
 form .pet-section,
 form .user-section,
 form .policy-section {
